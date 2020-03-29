@@ -24,6 +24,8 @@ module.exports = {
 
             await connection('incidents').where('id', id).delete();
             return res.status(204).send();
+            //return res.status(204).json({sucess: "Operação Realizada."});
+
     },
     async listarTodas(req, res) {
         const {page = 1} = req.query;
